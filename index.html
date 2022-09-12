@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio sharanya</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+
+    <header>
+		<nav>
+			<h5 class="logo">sharanya<span>r</span>shetty</h5>
+			<ul id="content">
+				<li><a href="#header">Home</a></li>
+				<li><a href="#about11">About</a></li>
+				<li><a href="#education11">Education</a></li>
+				<li><a href="#skills11">Skills</a></li>
+				<li><a href="#projects11">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+		</nav>
+    
+		<div id="hero">
+            <div class="aa">
+                <h4>My name is</h4>
+                <h1>SHARANYA R SHETTY</h1>
+                <a href="https://drive.google.com/file/d/10G-CEjgmlBJeYdBK2JVhVWNk3DcgVdqM/view?usp=drivesdk"><button>RESUME</button></a>
+            </div>
+            <div class="aa">
+                <img alt="dp" src="DSC_0343.JPG"></img>
+            </div>
+                
+		</div>
+    </header>
+
+  
+	
+	<div id="about">
+				<h2 id="about11">About Me</h2>
+				<p>Student of Electronic and Communication Engineering with zeal to
+                    learn new things. Familiar with web development and technical skills.
+                    Seeking for IT role in company to utilize my skills that can contribute
+                    to organization’s growth as well as enhance my knowledge.
+                    </p>
+    </div>
+
+	
+	<div id="education">
+		<div class="title">
+			<h2 id="education11">EDUCATION</h2>
+		</div>
+
+		<div class="box">
+			<div class="card">
+				<h5>Engineering</h5>
+				<div class="pra">
+					<p>ECE</p>
+                    <p>NMAMIT, NITTE</p>
+                    <p>CGPA:7.92</p>
+                    <P>2019-Present</P>
+				</div>
+			</div>
+
+			<div class="card">
+				<h5>PUC</h5>
+				<div class="pra">
+					<p>Science-PCMC</p>
+                    <p>NSAMPUC, NITTE</p>
+                    <p>Percentage: 91.16%</p>
+                    <P>2017-2019</P>
+				</div>
+			</div>
+
+			<div class="card">
+				<h5>X Grade</h5>
+				<div class="pra">
+                    <p>CBSE</p>
+					<p>NMAMS, NITTE</p>
+                    <p>CGPA:9.6</p>
+                    <P>2017</P>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+    <div id="skills">
+		<div class="title">
+			<h2 id="skills11">SKILLS</h2>
+		</div>
+
+		<div class="box1">
+			<div class="card">
+                <p>Programs:</p>
+				<ul>
+                    <li>PYTHON</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>JAVA</li>
+                </ul>
+			</div>
+
+                <div class="card">
+                    <p>Software:</p>
+                    <ul>
+                        <li>CST</li>
+                        <li>Proteus</li>
+                        <li>Ltspice</li>
+                        <li>MATLab</li>
+                        <li>Cadence</li>
+                        <li>Solid edge</li>
+                    </ul>
+                </div>
+		</div>
+	</div>
+
+    
+
+
+    <div id="projects">
+		<div class="title">
+			<h2 id="projects11">PROJECT</h2>
+		</div>
+
+		<div class="box2">
+			<div class="card1">
+				<h5>DOOR LOCK SYSTEM</h5>
+				<p>The objective is to allow access to people who enter the password
+                    correctly created using 8051 Microcontroller (AT89C51), solenoid
+                    lock, relay, 4x4 matrix keypad – using KeilVision4 software.</p>
+			</div>
+
+			<div class="card1">
+				
+                <h5>ACCIDENT DETECTION</h5>
+                <p>The objective is to send the message when vibration is alerted during
+                    accident detected by 8051 Microcontroller (AT89C51) using GSM
+                    module and SM420 vibration sensor – using Keil uVision4 software.</p>
+			</div>
+
+			<div class="card1">
+				
+                <h5>ANTENNA DESIGN</h5>
+                <p>Designed antenna of pentagonal patch for 2.4GHz frequency with
+                    defected ground plane using FR4(4.3 Er) dielectric material as
+                    substrate and copper as ground and patch with nearly 90% efficiency
+                    (-0.9dB) – using CST software.</p>
+                
+			</div>
+
+		</div>
+	</div>
+
+    <div class="contact" id="contact">
+        <form onsubmit="sendmail(); reset(); return false;">
+            <h3>CONTACT</h3>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email Id" required>
+            <textarea id="message" rows="4" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+
+
+	<footer>
+        <div>
+            <p>&copy; Sharanya R Shetty </p>
+        </div>
+	</footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendmail()
+            Email.send({
+            Host : "smtp.gamil.com",
+            Username : "4nm19ec157@nmamit.in",
+            Password : "4nm19ec157",
+            To : '4nm19ec157@nmamit.in',
+            From : document.getElementById("email").value,
+            Subject : "enquiry",
+            Body : "name:"+document.getElementById("name").value
+                +"<br> Eamil:"+document.getElementById("email").value
+                +"<br> Meassage:"+document.getElementById("message").value
+            }).then(
+            message => alert("succes")
+            );
+    </script>
+</body>
+</html>
